@@ -14,6 +14,6 @@ const ExpenseDate = (props) => {
       <div className="expense-date__days">{day}</div>
     </div>
   );
-}
+};
 
 export default ExpenseDate;
