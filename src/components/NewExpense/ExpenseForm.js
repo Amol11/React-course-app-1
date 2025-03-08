@@ -11,7 +11,7 @@ const ExpenseForm = (props) => {
     if (inputType === "title") {
       setEnteredTitle(event.target.value);
     } else if (inputType === "amount") {
-      setEnteredAmount(event.target.value);
+      setEnteredAmount(event.target.value); //event.target.value is received as a string val here
     } else {
       setEnteredDate(event.target.value);
     }
@@ -21,7 +21,7 @@ const ExpenseForm = (props) => {
     event.preventDefault();
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount, //amount is converted to a num here
       date: new Date(enteredDate),
     };
 
